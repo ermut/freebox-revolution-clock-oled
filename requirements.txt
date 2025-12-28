@@ -1,0 +1,7 @@
+SSD1306 utilise adafruit_ssd1306, board, PIL 
+SH1106 utilise luma.oled + PIL
+
+Pillow
+luma.oled
+adafruit-blinka
+adafruit-circuitpython-ssd1306
