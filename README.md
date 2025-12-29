@@ -1,14 +1,15 @@
 # Freebox Revolution OLED Clock (Raspberry Pi)
 
-Bring back the iconic **Freebox Revolution** clock display on modern hardware
+Bring back the iconic **Freebox Revolution** clock display on modern hardware  
 using a Raspberry Pi and a small 128×64 OLED screen.
 
 This project recreates the legendary Freebox clock:
-- a custom Freebox-like font (PNG-based digits)
-- smooth sliding / chasing animations when digits change
-- a clean, square and minimalist layout
 
-Originally developed for SSD1306 OLED displays, the project was later migrated
+- Custom Freebox-like font (PNG-based digits)
+- Smooth sliding / chasing animations when digits change
+- Clean, square and minimalist layout
+
+Originally developed for SSD1306 OLED displays, the project was later migrated  
 to SH1106 displays (more common and reliable today).
 
 ---
@@ -30,7 +31,7 @@ A short demonstration video is available in this repository.
 ### I2C wiring
 
 | OLED | Raspberry Pi |
-|-----:|--------------|
+|------|--------------|
 | VCC  | 3.3V or 5V (depends on module) |
 | GND  | GND |
 | SDA  | GPIO2 (SDA) |
@@ -46,11 +47,16 @@ Typical I2C address: `0x3C`
 
 ```bash
 sudo raspi-config
-# Interface Options → I2C → Enable
+
+
+Interface Options → I2C → Enable
+
+Reboot when prompted
+
 sudo reboot
 
 
-(Optional check)
+Optional check:
 
 sudo apt install -y i2c-tools
 i2cdetect -y 1
@@ -79,7 +85,7 @@ Autostart at boot (systemd)
 
 A systemd service file is provided in the systemd/ directory.
 
-Edit the paths inside the service file if needed
+Edit paths inside the service file if needed
 
 Install the service:
 
@@ -95,8 +101,9 @@ systemctl status freebox-clock
 
 Notes
 
-If the display stays blank, verify the I2C address (0x3C is common, sometimes 0x3D)
+If the display stays blank, verify the I2C address
+(0x3C is common, sometimes 0x3D)
 
 Make sure your OLED module is I2C (not SPI)
 
-Contrast/brightness can be adjusted in the code if needed
+Contrast/brightness can be adjusted in the code
