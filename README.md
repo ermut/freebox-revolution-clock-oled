@@ -44,3 +44,8 @@ Typical I2C address: `0x3C`
 sudo raspi-config
 # Interface Options -> I2C -> Enable
 sudo reboot
+
+sudo apt install -y i2c-tools
+i2cdetect -y 1
+
+
