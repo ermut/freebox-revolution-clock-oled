@@ -113,6 +113,6 @@ Check status:
 - Make sure your OLED module is **I2C** (not SPI)
 - Contrast / brightness can be adjusted in the code
 
----
+
 
 
