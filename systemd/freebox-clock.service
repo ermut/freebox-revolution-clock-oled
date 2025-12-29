@@ -1,0 +1,14 @@
+[Unit]
+Description=Freebox Revolution OLED Clock
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/freebox-revolution-clock-oled/src/freebox_clock_sh1106.py
+WorkingDirectory=/home/pi/freebox-revolution-clock-oled
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target
